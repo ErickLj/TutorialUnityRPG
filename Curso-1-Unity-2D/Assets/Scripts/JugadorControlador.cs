@@ -8,9 +8,22 @@ public class JugadorControlador : MonoBehaviour
     public int valor;
     public float velocidadMov;
     public Animator miAnim;
+
+    public static JugadorControlador instancia;
+    public string nombreAreaTransicion;
+    
     // Start is called before the first frame update
     void Start()
     {
+        if (instancia == null)
+        {
+            instancia = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
         DontDestroyOnLoad(gameObject);
     }
 

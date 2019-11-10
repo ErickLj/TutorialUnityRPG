@@ -7,10 +7,13 @@ public class AreaSalida : MonoBehaviour
 {
 
     public string areaACargar;
+    public string nombreAreaTransicion;
+    public AreaEntrada laEntrada;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        laEntrada.nombreTransicion = nombreAreaTransicion;
     }
 
     // Update is called once per frame
@@ -24,6 +27,8 @@ public class AreaSalida : MonoBehaviour
         if(otro.tag == "Player")
         {
             SceneManager.LoadScene(areaACargar);
+
+            JugadorControlador.instancia.nombreAreaTransicion = nombreAreaTransicion;
         }
     }
 }
