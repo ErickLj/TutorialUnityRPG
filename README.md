@@ -1,3 +1,1 @@
 # TutorialUnityRPG
-Aprenderemos mucho : )
-gg
